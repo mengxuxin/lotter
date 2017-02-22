@@ -1,0 +1,35 @@
+<RCC>
+    <qresource prefix="/background">
+        <file>resources/bg.png</file>
+        <file>resources/bg2.png</file>
+        <file>resources/startLotteryBG1.png</file>
+        <file>resources/startLotteryBG12.png</file>
+        <file>resources/button_begin_click.png</file>
+        <file>resources/button_begin_hov.png</file>
+        <file>resources/button_begin_nor.png</file>
+        <file>resources/button_continue_click.png</file>
+        <file>resources/button_continue_hov.png</file>
+        <file>resources/button_continue_nor.png</file>
+        <file>resources/button_finish_click.png</file>
+        <file>resources/button_finish_hov.png</file>
+        <file>resources/button_finish_nor.png</file>
+        <file>resources/button_stop_click.png</file>
+        <file>resources/button_stop_hov.png</file>
+        <file>resources/button_stop_nor.png</file>
+        <file>resources/nav.png</file>
+        <file>resources/nav_set_hov.png</file>
+        <file>resources/nav_set_nor.png</file>
+        <file>resources/nav_small_hov.png</file>
+        <file>resources/nav_small_nor.png</file>
+        <file>resources/set_big_hov.png</file>
+        <file>resources/set_big_nor.png</file>
+        <file>resources/set_close_hov.png</file>
+        <file>resources/set_close_nor.png</file>
+        <file alias="first">resources/first.png</file>
+        <file alias="four">resources/four.png</file>
+        <file alias="luck">resources/luck.png</file>
+        <file alias="second">resources/second.png</file>
+        <file alias="special">resources/special.png</file>
+        <file alias="thrid">resources/third.png</file>
+    </qresource>
+</RCC>

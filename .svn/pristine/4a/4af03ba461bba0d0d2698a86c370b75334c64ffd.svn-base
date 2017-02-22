@@ -1,0 +1,31 @@
+﻿生成启动时间为 2017/1/4 17:19:37。
+     1>项目“D:\work\CCLottery\CCLottery.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I. /IC:\Qt\Qt5.7.0\5.7\msvc2015\include /IC:\Qt\Qt5.7.0\5.7\msvc2015\include\QtWidgets /IC:\Qt\Qt5.7.0\5.7\msvc2015\include\QtGui /IC:\Qt\Qt5.7.0\5.7\msvc2015\include\QtANGLE /IC:\Qt\Qt5.7.0\5.7\msvc2015\include\QtSql /IC:\Qt\Qt5.7.0\5.7\msvc2015\include\QtCore /Icompiled\moc /Icompiled\ui /I"C:\Qt\Qt5.7.0\5.7\msvc2015\mkspecs\win32-msvc2015" /I.\GeneratedFiles /Zi /nologo /W3 /WX- /Od /Oy- /D _WINDOWS /D UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_SQL_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"Win32\Debug\\" /Fd"Win32\Debug\vc140.pdb" /Gd /TP /wd4577 /analyze- /errorReport:prompt -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 main.cpp
+         main.cpp
+     1>d:\work\cclottery\CCLottery.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\work\cclottery\lotteryData.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\work\cclottery\DBUtil.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"bin\\CCLottery.exe" /NOLOGO /LIBPATH:C:\Qt\Qt5.7.0\5.7\msvc2015\lib /LIBPATH:C:\utils\postgresql\pgsql\lib /LIBPATH:C:\utils\my_sql\my_sql\lib /LIBPATH:C:\Qt\Qt5.7.0\5.7\msvc2015\lib C:\Qt\Qt5.7.0\5.7\msvc2015\lib\qtmaind.lib shell32.lib C:\Qt\Qt5.7.0\5.7\msvc2015\lib\Qt5Widgetsd.lib C:\Qt\Qt5.7.0\5.7\msvc2015\lib\Qt5Guid.lib C:\Qt\Qt5.7.0\5.7\msvc2015\lib\Qt5Sqld.lib C:\Qt\Qt5.7.0\5.7\msvc2015\lib\Qt5Cored.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"bin\CCLottery.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /SAFESEH "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" Win32\Debug\Application.obj
+         Win32\Debug\CCLottery.obj
+         Win32\Debug\moc_Application.obj
+         Win32\Debug\moc_CCLottery.obj
+         Win32\Debug\moc_lotteryingWin.obj
+         Win32\Debug\moc_LotterySettingsWin.obj
+         Win32\Debug\moc_LotteryView.obj
+         Win32\Debug\moc_MainWindow.obj
+         Win32\Debug\DBUtil.obj
+         Win32\Debug\qrc_lottery.obj
+         Win32\Debug\LotterySettingsWin.obj
+         Win32\Debug\lotteryData.obj
+         Win32\Debug\lotteryingWin.obj
+         Win32\Debug\LotteryView.obj
+         Win32\Debug\main.obj
+         Win32\Debug\MainWindow.obj
+         CCLottery.vcxproj -> D:\work\CCLottery\bin\CCLottery.exe
+     1>已完成生成项目“D:\work\CCLottery\CCLottery.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:02.33

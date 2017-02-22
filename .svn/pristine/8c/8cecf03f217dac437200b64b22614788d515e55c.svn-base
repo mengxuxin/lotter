@@ -1,0 +1,62 @@
+#ifndef CLOADLOTTERYDATA_H
+#define CLOADLOTTERYDATA_H
+
+#include <QByteArray>
+#include <QVector>
+#include <QMutex>
+#include <QImage>
+/*!
+  人员信息类 主要是人名和照片
+*/
+struct SPeopleInfo
+{
+public:
+    QString     m_strName;      //人员名字
+    QByteArray  m_pictureba;    //人员照片二进制流
+    int         m_lotteryGrade = -1; //几等奖   持久化考虑，存储中奖人员名单, 默认为-1 未中奖
+	QImage      m_image;
+
+
+};
+
+/*!
+    奖池人员类：总共人员，待抽奖人员，已抽奖人员
+    已抽奖人员的持久化
+
+    对外接口：
+    获取待抽奖人员列表
+*/
+class CLotteryData
+{
+public:
+    static CLotteryData *instance();
+    static void releaseInstance();
+
+
+	void removeOnePeople(const SPeopleInfo &people);
+    /**
+     * @brief 加载人员信息
+     */
+    void loadData();
+
+    /**
+     * @brief 获取待抽奖人员列表
+     * 返回之前做一次洗牌
+     * @return 待抽奖人员列表
+     */
+    QVector<SPeopleInfo> &getWaitLotteryPeoples();
+	SPeopleInfo p;
+
+private:
+    CLotteryData();
+private:
+    static QMutex mutex;
+    static CLotteryData* s_Instance;
+
+private:
+    QVector<SPeopleInfo> m_lotteryPeoples;       //全部抽奖人员
+    QVector<SPeopleInfo> m_waitLotteryPeoples;   //待抽奖人员
+    QVector<SPeopleInfo> m_lotteryedPeoples;     //已中奖人员
+};
+
+#endif // CLOADLOTTERYDATA_H

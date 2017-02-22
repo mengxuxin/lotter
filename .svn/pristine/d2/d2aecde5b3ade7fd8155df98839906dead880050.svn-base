@@ -1,0 +1,96 @@
+#include "lotteryData.h"
+#include <algorithm>
+#include <QDir>
+#include <QPixmap>
+#include <QDebug>
+#include "DBUtil.h"
+
+QMutex CLotteryData::mutex;
+CLotteryData *CLotteryData::s_Instance = NULL;
+
+CLotteryData::CLotteryData()
+{
+    loadData();
+}
+
+CLotteryData *CLotteryData::instance()
+{
+    if (0 == s_Instance)
+    {
+        mutex.lock();
+        if (0 == s_Instance) {
+            s_Instance = new CLotteryData();
+        }
+        mutex.unlock();
+    }
+    return s_Instance;
+}
+
+void CLotteryData::releaseInstance()
+{
+    if (NULL != s_Instance)
+    {
+        mutex.lock();
+        delete s_Instance;
+        s_Instance = NULL;
+        mutex.unlock();
+    }
+}
+
+void CLotteryData::removeOnePeople(const SPeopleInfo &people)
+{
+	//int index = m_waitLotteryPeoples.indexOf(people);
+	//m_waitLotteryPeoples.removeOne(people);
+	SPeopleInfo *removeIt = NULL;
+	for (auto iter = m_waitLotteryPeoples.begin(); iter != m_waitLotteryPeoples.end(); ++iter)
+	{
+		if (people.m_strName.compare(iter->m_strName) == 0)
+		{
+			m_waitLotteryPeoples.erase(iter);
+			qDebug() << "remove:" << people.m_strName<<" wait peoples count:"<< m_waitLotteryPeoples.count();
+			//removeIt = iter;
+			break;
+		}
+	}
+	if (removeIt)
+	{
+		//m_waitLotteryPeoples.erase(removeIt);
+	}
+}
+
+void CLotteryData::loadData()
+{
+	// 6. 查询刚才插入的数据
+	QSqlQuery selectQuery(DBUtil::instance()->db);
+	selectQuery.exec("select username, picture  from Users where bLottery != 1");
+
+	while (selectQuery.next()) {
+		qDebug() << QString("username: %1")
+			.arg(selectQuery.value("username").toString());
+		SPeopleInfo people;
+#ifdef TESTONE
+		QFile file(":/background/resources/f.png");
+		file.open(QIODevice::ReadOnly);
+		QByteArray ba = file.readAll();
+
+		file.close();
+		people.m_pictureba = ba;
+
+#else
+		people.m_pictureba = selectQuery.value("picture").toByteArray();
+#endif
+		people.m_strName = selectQuery.value("username").toString();
+		people.m_image = QImage::fromData(people.m_pictureba);
+		people.m_image.scaled(QSize(230, 258), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+		m_lotteryPeoples.push_back(people);
+		m_waitLotteryPeoples.push_back(people);
+	}
+	
+}
+
+QVector<SPeopleInfo> &CLotteryData::getWaitLotteryPeoples()
+{
+    //用标准库的洗牌算法
+    std::random_shuffle(m_waitLotteryPeoples.begin(),m_waitLotteryPeoples.end());
+    return m_waitLotteryPeoples;
+}

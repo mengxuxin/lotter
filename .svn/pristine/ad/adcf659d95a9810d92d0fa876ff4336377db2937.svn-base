@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CCLottery</class>
+ <widget class="QWidget" name="CCLottery">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>608</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CCLottery</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1282</width>
+     <height>650</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="mainWidget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>1280</width>
+        <height>608</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1280</width>
+        <height>608</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	border-image: url(:/background/resources/button_begin_nor.png);
+}
+QPushButton:hover{
+	border-image: url(:/background/resources/button_begin_hov.png);
+}
+QPushButton:clicked{
+	border-image: url(:/background/resources/button_begin_click.png);
+}</string>
+      </property>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="geometry">
+        <rect>
+         <x>316</x>
+         <y>106</y>
+         <width>650</width>
+         <height>268</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="page">
+        <widget class="ClotteryingWin" name="lotterywidget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>254</x>
+           <y>13</y>
+           <width>141</width>
+           <height>158</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lotteryLabel">
+         <property name="geometry">
+          <rect>
+           <x>213</x>
+           <y>202</y>
+           <width>220</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family:MicrosoftYaHei;
+font-size:20px;
+color:#ffffff;
+letter-spacing:2px;
+line-height:20px;
+font: bold;
+text-shadow:0px 0px 4px rgba(177,83,8,0.60);</string>
+         </property>
+         <property name="text">
+          <string>恭喜%1获得%2</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="doubleItem">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>9</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>12</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QWidget" name="widget" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="topLayout">
+              <property name="spacing">
+               <number>30</number>
+              </property>
+              <property name="topMargin">
+               <number>2</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_2" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="bottomLayout">
+              <property name="spacing">
+               <number>30</number>
+              </property>
+              <property name="leftMargin">
+               <number>107</number>
+              </property>
+              <property name="topMargin">
+               <number>4</number>
+              </property>
+              <property name="rightMargin">
+               <number>2</number>
+              </property>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-family:MicrosoftYaHei;
+font-size:20px;
+color:#ffffff;
+letter-spacing:2px;
+line-height:20px;
+font: bold;
+text-align:center;</string>
+           </property>
+           <property name="text">
+            <string>有请中奖的小伙伴上台领奖</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="oneItem">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QWidget" name="OnlyViews" native="true">
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <property name="spacing">
+             <number>35</number>
+            </property>
+            <property name="leftMargin">
+             <number>9</number>
+            </property>
+            <property name="topMargin">
+             <number>30</number>
+            </property>
+            <property name="bottomMargin">
+             <number>4</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <property name="spacing">
+               <number>18</number>
+              </property>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-family:MicrosoftYaHei;
+font-size:20px;
+color:#ffffff;
+letter-spacing:2px;
+line-height:20px;
+font: bold;
+text-align:center;</string>
+              </property>
+              <property name="text">
+               <string>有请中奖的小伙伴上台领奖</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="mutilOperatorBtn">
+       <property name="geometry">
+        <rect>
+         <x>562</x>
+         <y>427</y>
+         <width>155</width>
+         <height>78</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#start{
+	border-image: url(:/background/resources/button_begin_nor.png);
+}
+QPushButton#start:hover{
+	border-image: url(:/background/resources/button_begin_hov.png);
+}
+QPushButton#start:pressed{
+	border-image: url(:/background/resources/button_begin_click.png);
+}
+
+QPushButton#stop{
+	border-image: url(:/background/resources/button_stop_nor.png);
+}
+QPushButton#stop:hover{
+	border-image: url(:/background/resources/button_stop_hov.png);
+}
+QPushButton#stop:pressed{
+	border-image: url(:/background/resources/button_stop_click.png);
+}
+QPushButton#continue{
+	border-image: url(:/background/resources/button_continue_nor.png);
+}
+QPushButton#continue:hover{
+	border-image: url(:/background/resources/button_continue_hov.png);
+}
+QPushButton#continue:pressed{
+	border-image: url(:/background/resources/button_continue_click.png);
+}
+
+QPushButton#takeLottery{
+	border-image: url(:/background/resources/button_finish_nor.png);
+}
+QPushButton#takeLottery:hover{
+	border-image: url(:/background/resources/button_finish_hov.png);
+}
+QPushButton#takeLottery:pressed{
+	border-image: url(:/background/resources/button_finish_click.png);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>544</x>
+         <y>44</y>
+         <width>201</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-family:MicrosoftYaHei;
+font-size:18px;
+color:#ffffff;
+line-height:19px;
+font: bold;
+text-shadow:0px 2px 4px #b01b00;</string>
+       </property>
+       <property name="text">
+        <string>2017年CC视频年会抽奖</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lotteryInfoLabel">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>533</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-family:MicrosoftYaHei;
+font-size:18px;
+color:#ffffff;
+font: bold;
+line-height:18px;
+text-shadow:0px 2px 4px #b01b00;
+text-align:center;</string>
+       </property>
+       <property name="text">
+        <string>%1（%2/%3）</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lotteryPicture">
+       <property name="geometry">
+        <rect>
+         <x>778</x>
+         <y>340</y>
+         <width>266</width>
+         <height>192</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ClotteryingWin</class>
+   <extends>QWidget</extends>
+   <header>lotteryingWin.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
